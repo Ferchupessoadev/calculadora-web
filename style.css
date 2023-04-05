@@ -4,9 +4,19 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+
+:root {
+    --primary-color: #0c2835;
+    --secondary-color: #008B8B;
+}
+
 body {
-    background-color: #00474e;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23007984' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color:var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section__calc {
@@ -14,7 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:40px;
+    margin-top:20px;
 }
 
 
@@ -22,30 +32,40 @@ body {
     display: flex;
     flex-direction: column;
     gap:15px;
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 420px;
     padding:10px;
     background: rgb(0, 42, 45);
     border-radius: 8px;
+    border: 1px solid var(--secondary-color);
 }
 
 .container-calc__h1 {
     font-family: 'Oswald', sans-serif;
     font-size:18px;
-    height:18px;
+    height:22px;
     text-align: center;
     color:rgb(230, 230, 230);
 }
 
 .display {
-    width: 100%;
+    gap:5px;
+    width: 90%;
+    margin:auto;
     height: 60px;
     background:rgb(0, 62, 22);
     border-radius: 8px;
     background-color: #00916e;
     display:flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.display__operacion {
+    display:flex;
+    gap:3px;
+    padding-right: 15px;
 }
 
 .result {
@@ -55,12 +75,13 @@ body {
 
 .calc__container-btn {
     display: grid;
-    grid-template-columns: repeat(4,85px);
-    grid-template-rows: repeat(5,55px);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
     gap:20px;
     justify-content: center;
     align-self: center;
     justify-self: center;
+    margin-top:10px;
 }
 
 .calc__container-btn div  {
@@ -71,11 +92,18 @@ body {
     justify-content: center;
     border-radius: 8px;
     cursor:pointer;
+    min-width: 60px;
+    min-height: 30px;
+}
+
+.calc__container-btn div:active {
+    opacity:0.8;
 }
 
 .calc__container-btn div p {
     font-family: 'Noto Sans Indic Siyaq Numbers', sans-serif; 
     color:#fff;
+    user-select: none;
 }
 
 
@@ -125,6 +153,6 @@ body {
     font-size: 18px;
     padding:4px;
     text-align: center;
-    height: 8px;
+    height: 18px;
     color:#fff;
 }

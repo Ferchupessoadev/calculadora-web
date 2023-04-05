@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Noto+Sans+Math&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Noto+Sans+Math&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="style.css">
+    <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com">
+    <link 
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Noto+Sans+Math&display=swap" rel="stylesheet">
+    <link 
+        rel="preconnect" href="https://fonts.googleapis.com">
+    <link 
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Noto+Sans+Math&family=Oswald:wght@500&display=swap" 
+        rel="stylesheet">
 </head>
 <body>
     <section class="section__calc">
         <div class="container-calc">
             <h1 class="container-calc__h1">Calculadora digital</h1>
-            <div class="display"><p class="result">0</p></div>
+            <div class="display">
+                <div class="display__operacion">
+                    <p class="display__num-1"></p>
+                    <p class="display__signo"></p>
+                    <p class="display__num-2"></p>
+                </div>
+                <p class="result"></p>
+            </div>
             <div class="calc__container-btn">
                 <div class="btn-num"><p class="btn__p">9</p></div>
                 <div class="btn-num"><p class="btn__p">8</p></div><!--1 -->
@@ -33,12 +49,13 @@
                 <div class="btn-ope"><p class="btn__p">-</p></div><!--11-->
                 <div class="btn-ope"><p class="btn__p">*</p></div><!--12 -->
                 <div class="btn-ope"><p class="btn__p">/</p></div><!--13 -->
-                <div class="btn-ope"><p class="btn__p">=</p></div><!--14 -->
+                <div class="btn-result"><p class="btn__p">=</p></div><!--14 -->
                 <div class="btn-delete"><p class="btn__p">←</p></div><!--15 -->
                 <div class="btn-delete-all"><p class="btn__p">c</p></div><!--16 -->
             </div>
             <p class="container-calc__p">powered by Fernando M. Pessoa</p>
         </div>
     </section>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>
